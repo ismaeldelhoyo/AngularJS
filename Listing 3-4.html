@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>Listing 3-4</title>
+        <script src="js/angular.min.js"></script>
+        <script>
+            function MyFirstCtrl($scope){
+                var employees = ['Catherine Grant', 'Monica Grant',
+                'Christopher Grant', 'Jennifer Grant'
+                ];
+                $scope.ourEmployees = employees;
+            }
+        </script>
+    </head>
+    <body ng-controller="MyFirstCtrl">
+        <h2>Number of Employees: {{ourEmployees.length}}</h2>
+        <p ng-repeat="a in ourEmployees">{{a}}</p>
+    </body>
+</html>
